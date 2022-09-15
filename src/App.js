@@ -1,20 +1,30 @@
-import Login from "./components/Login";
-import Logout from "./components/Logout";
-import Profile from "./components/Profile";
+// import Login from "./components/Login";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Home from "./components/Home";
-import { useAuth0 } from '@auth0/auth0-react';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+// import { useAuth0 } from '@auth0/auth0-react';
+
+
 function App() {
-  const { isAuthenticated } = useAuth0();
+
+  // const { isAuthenticated } = useAuth0();
   return (
-    <div className="App">
-      {isAuthenticated ? <>
-       <Logout /> 
-      <Profile /> 
-      </>
-      : 
-      <Login />}
+    <BrowserRouter>
+      <Header />
     
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        </Routes>
+     <Footer />
+    
+
+    
+</BrowserRouter>
   );
 }
 
