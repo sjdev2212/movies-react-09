@@ -9,13 +9,13 @@ const Home = () => {
     const { isAuthenticated } = useAuth0();
   return (
    <main>
+         <h1>Welcome to the movies database!</h1>
          {isAuthenticated ? <>
             <Profile /> 
             <Logout />
          </> : <Login/>}
     
       
-         <h1>Welcome to the movies database!</h1>
 
    </main>
   )
