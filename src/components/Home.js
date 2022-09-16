@@ -8,7 +8,7 @@ import Login from './Login';
 const Home = () => {
     const { isAuthenticated } = useAuth0();
   return (
-   <main>
+   <main className='mt-5'>
          <h1>Welcome to the movies database!</h1>
          {isAuthenticated ? <>
             <Profile /> 

@@ -1,6 +1,6 @@
 import React from 'react'
 import{Link} from 'react-router-dom'
-// import Buscador from './Search'
+import Searcher from "./Searcher";
 import '../styles/header.css'
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
          <Link  className="header-li"  to='/favoritos'>Favorites</Link>
        </li>
      </ul>
-   {/* <Buscador/> */}
+      <Searcher />
   </nav>
 
   )
