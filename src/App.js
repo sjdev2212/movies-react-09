@@ -1,30 +1,25 @@
-// import Login from "./components/Login";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-// import { useAuth0 } from '@auth0/auth0-react';
-
+import List from "./components/List";
+import Details from "./components/Details";
+import Results from "./components/Results";
 
 function App() {
 
-  // const { isAuthenticated } = useAuth0();
   return (
     <BrowserRouter>
       <Header />
-    
+
       <Routes>
         <Route path="/" element={<Home />} />
-        </Routes>
-     <Footer />
-    
-
-    
-</BrowserRouter>
+        <Route path="/list" element={<List />} />
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="results/:id" element={<Results />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
