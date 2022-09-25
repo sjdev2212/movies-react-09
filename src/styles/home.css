@@ -1,13 +1,5 @@
 .home{
-    padding: 0;
-    margin: 160px 5px;
-    height: 46vw;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* background-image: url('../images/home.jpg');
-    background-size: cover; */
-  /* opacity: calc(194); */
+ 
 
 }
 .title{
